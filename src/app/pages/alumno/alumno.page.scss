@@ -1,0 +1,33 @@
+#azul1{
+    color: #006778;
+}
+#azul2{
+    color:#0093AB;
+}
+#azul3{
+    color:#00AFC1;
+}
+#yelllow{
+    color:#FFD124;
+}
+
+ion-content{
+    --ion-background-color: #00AFC1;
+}
+
+#btn{
+    --background:#FFD124;
+    --color:#006778;
+    --border-radius:15px;
+    --box-shadow: 5px 5px 7px #006778;
+}
+
+ion-toolbar{
+    --background:#FFD124 ;
+    --color: #006778;
+}
+
+ion-label{
+    --color: #006778;
+    --padding-top: 10%;
+}

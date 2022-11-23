@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="end">
+      <ion-button (click)="presentAlert()">
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+        <p>{{ handlerMessage }}</p>
+        <p>{{ roleMessage }}</p>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Registrapp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="12">
+      <br>
+      <br>
+      <br>
+      <ion-item>
+        <ion-label position="fixed" >Jornada:</ion-label>
+        <ion-input type="text" placeholder="ingrese jornada..."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="fixed" >Tiempo QR:</ion-label>
+        <br>
+        <ion-input type="text" placeholder="Ingrese min"></ion-input>
+      </ion-item>
+      <br>
+    </ion-col>
+    <ion-col size="12">
+     
+      <ion-item>
+        <ion-text position="fixed" ><strong id="yellow" >Programación app Móviles <br>
+          profesor(a): Viviana Poblete</strong> </ion-text>
+        
+       
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <br><br>
+  <ion-row>
+    <ion-col  offset="3" size="6">
+      <ion-button  (click)="Generate()" expand="full" 
+       shape="round"id="btn" expand="block"  strong=true >
+        Generar QR
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12"></ion-col>
+  </ion-row>
+</ion-content>

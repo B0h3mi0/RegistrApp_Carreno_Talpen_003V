@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="end">
+      <ion-button (click)="presentAlert()">
+        <ion-icon name="person"></ion-icon>
+      </ion-button>
+        <!-- <p>{{ handlerMessage }}</p>
+        <p>{{ roleMessage }}</p> -->
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Registrapp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="fondoApp">
+  <ion-img src="assets/logoApp.png" ></ion-img>
+
+  <ion-row>
+    <ion-col size="12">
+      <ion-item>
+        <ion-label position="fixed" >Asignatura</ion-label>
+        <ion-input type="text" placeholder="Nombre asignatura..."></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="12">
+      <ion-item>
+        <ion-label position="fixed" >Seccion</ion-label>
+        <ion-input type="text" placeholder="Seccion..."></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <br><br>
+  <ion-row>
+    <ion-col  offset="3" size="6">
+      <ion-button  (click)="Ok()" expand="full" 
+      shape="round"id="btn" expand="block"  strong=true >
+        Escanear
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12"></ion-col>
+  </ion-row>
+</ion-content>
