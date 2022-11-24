@@ -1,0 +1,35 @@
+<ion-header> </ion-header>
+
+<ion-content>
+  <div id="Container">
+      <div class="heading ion-padding">
+        <ion-card class="ima">
+          <img src="assets/logo.png" class="imagen">
+        </ion-card>       
+      </div>
+      <div  class="login-form ion-padding">
+        <div class="form-input">
+          <ion-item  fill="solid" class="ion-margin-bottom">
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input [(ngModel)]="credenciales.correo"></ion-input>
+          </ion-item>
+        </div>
+        <div class="form-input">  
+          <ion-item fill="solid" class="ion-margin-bottom">
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input [(ngModel)]="credenciales.password"></ion-input>
+          </ion-item>
+        </div>
+        <div class="action-button ion-padding">  
+          <ion-button (click)="login()" type="submit" expand="block" class="login-button"
+          >Log in</ion-button>
+        </div>
+        <br>
+        <div class="action-button ion-padding">
+          <ion-button  type="submit" expand="block" class="login-button" routerLink="/registro-usuario">
+              Registrarse
+          </ion-button> 
+        </div> 
+      </div>        
+  </div>
+</ion-content>

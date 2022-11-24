@@ -1,0 +1,102 @@
+ion-content{
+    --background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+        url("/assets/imagen1.jpg") no-repeat center center / cover;
+}
+
+ion-card{
+    background: none;
+    box-shadow: none;
+    color: #ffff;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.titulo{
+    color: #ffff;
+}
+
+.select{
+    padding-left: 25px;
+    padding-top: 60px;
+}
+
+.heading{
+    margin-top: 40px;
+    
+    p{
+        margin-top: 30px;
+        font-size: 1rem;
+        
+    }
+    .ima{
+        
+        background: none;
+        box-shadow: none;
+        width: 90%;
+        height: 90%;
+        
+    }
+}
+.login-form{
+    .form-input{
+        position: relative;
+        margin-bottom: 20px;
+        ion-item::part(native) {
+            padding-left: 0;
+        background: none;
+        }
+        ion-icon{
+            position: absolute;
+            top: 37px;
+            z-index: 2;
+            font-size: 1.2rem;
+            left: 5px;
+            
+        }
+        ion-label{
+            position: absolute;
+            margin-left: 35px;
+            font-weight: bolder;
+            font-size: 0.8rem;
+            top: 3px;
+            
+        }
+        ion-input{
+            font-size: 0.9rem;
+            --padding-start: 36px;
+            --padding-top: 36px;
+            
+        }
+
+    }
+}
+.action-button{
+    text-align: center;
+    .login-button{
+        --background: #f9b801;
+        width: 100%;
+        font-weight: bold;
+        
+    }
+    p{
+        margin-top: 15px;
+        font-size: 1rem;
+        
+    }
+    .signup-button{
+        --border-color: #b4b4b4;
+        -color: #000000;
+        font-weight: bold;
+        margin-top: 5px;
+        width: 100%;
+    }
+    .pass{
+        color: #ffff;
+    }
+
+}
+
+.combo{
+    margin-right: 25%;
+}
+

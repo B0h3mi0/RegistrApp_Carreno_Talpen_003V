@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/crear-qr"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Asignaturas</ion-label>
+        <ion-select placeholder="Opcion" [(ngModel)]="usuario.nom" okText="Escoger curso" cancelText="Cancelar">
+          <ion-select-option value="Programacion de Algoritmos">Programacion Algoritmos</ion-select-option>
+          <ion-select-option value="Desarrollo software de escritorio">Software de escritorio</ion-select-option>
+          <ion-select-option value="Programacion Aplicaciones moviles">Aplicaciones moviles</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>  
+    <ion-list>
+      <ion-item id="open-modal">
+        <ion-label>Fecha de clase</ion-label>
+        <ion-note slot="end">{{dateExample | date}}</ion-note>
+      </ion-item>
+      <ion-modal trigger="open-modal" [cssClass]="'center'">
+        <ng-template>
+          <ion-datetime
+            presentation="date"
+            [(ngModel)]="dateExample"
+            size="cover"
+            [showDefaultButtons]="true"
+            [showDefaultTitle]="true"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-list>
+    <ion-list>
+      <ion-item id="open-modal3">
+        <ion-label>Hora de clase</ion-label>
+        <ion-note slot="end">{{dateExample | date: 'HH:mm'}}</ion-note>
+      </ion-item>
+      <ion-modal trigger="open-modal3" [cssClass]="'bottom-end'">
+        <ng-template>
+          <ion-datetime
+            presentation="time"
+            [(ngModel)]="dateExample"
+            size="cover"
+            [showDefaultButtons]="true"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-list>
+  </ion-card-content>  
+
+    <ion-card-content>
+
+
+
+       <ion-button 
+           expand="block" 
+           class="ion-margin" 
+           (click)="generaScan()">
+           Generate QR Code  
+       </ion-button>
+
+       <qrcode 
+         [qrdata]="qrCodeString" 
+         [width]="285" 
+         [errorCorrectionLevel]="'M'">
+       </qrcode>
+
+
+     </ion-card-content>
+
+   <ion-card-content>
+    <p class="parrafo">
+      Asignatura : {{usuario.nom}}
+      <br>
+      Fecha : {{dateExample}}
+    </p>
+  </ion-card-content>
+
+
+</ion-content>

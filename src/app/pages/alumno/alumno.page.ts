@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
@@ -12,9 +13,9 @@ export class AlumnoPage implements OnInit {
   constructor(private menuController:MenuController,
     private alertController: AlertController) { }
 
+  
   ngOnInit() {
   }
-
   mostrarMenu(){
     this.menuController.open('first');
   }

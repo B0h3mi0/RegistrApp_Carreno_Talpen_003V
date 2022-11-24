@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        color="primary"></ion-back-button>
+    </ion-buttons>
+      <ion-title size="small" id="azul1">Login Docentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="fondoApp">
+  <ion-img src="assets/logoApp.png" ></ion-img>
+
+
+  <div  class="login-form ion-padding">
+    <ion-item>
+      <ion-label  position="floating" class="ion-text-center" >Ingrese correo institucional...</ion-label>
+      <ion-input [(ngModel)]="credenciales.correo"></ion-input>
+    </ion-item>
+    
+    <br>
+
+    <ion-item>
+      <ion-label  position="floating" class="ion-text-center" >Ingrese contraseña...</ion-label>
+      <ion-input [(ngModel)]="credenciales.password" type="password"></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-row>
+      <ion-col  offset="3" size="6">
+        <ion-button (click)="login()" id="btn" expand="block" strong=true  type="submit" >
+          Aceptar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  
+  <br>
+
+  <a color="medium" [routerLink]="['/crearcuenta']" class="underline" style="color:gold; align-content:center;"  >¿Aun no te registras?</a>
+
+
+</ion-content>

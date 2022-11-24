@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/inicio"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tomar - Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Tomar Asistencia</ion-card-title>
+      <ion-card-subtitle class="subtitulo">Estimado Profes@r</ion-card-subtitle>
+      
+    </ion-card-header>
+    <ion-card-content>
+      <p class="parrafo">
+        Mediante esta función usted podrá acceder a sus clases asignadas y el horario de cada una, la cual usted deberá asignar la clase actual y presionar el botón de generar QR para proyectarse en la sala de clases.
+
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+  <icon-card>
+    <img src="assets/Crear.JPG" class="ion-padding">
+  </icon-card>
+  <div class="action-button ion-padding">
+    <ion-button  type="submit" class="login-button"
+                size="large" class="login-button" routerLink="/crear-qr" >
+                Crear
+    </ion-button>
+  </div> 
+
+</ion-content>

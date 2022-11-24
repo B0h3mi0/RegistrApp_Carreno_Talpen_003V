@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { ApiService } from 'src/app/services/api.service';
+import { Article } from '../interfaces/interfaces';
 
 @Component({
   selector: 'app-entretenimiento',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntretenimientoPage implements OnInit {
 
-  constructor() { }
+  noticias: Article[] = [];
+
+  constructor(private menuController: MenuController, private apiService: ApiService) { }
 
   ngOnInit() {
+    this.apiService.getTopHeadLines().subscribe(resp => {
+      console.log('noticias', resp);
+      this.noticias.push(...resp.articles);
+    })
+
+  }
+
+  mostrarMenu(){
+    this.menuController.open('first');
   }
 
 }
+

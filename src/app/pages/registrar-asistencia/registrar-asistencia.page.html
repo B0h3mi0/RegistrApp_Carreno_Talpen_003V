@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/inicio"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrar Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Registrar Asistencia</ion-card-title>
+      <ion-card-subtitle class="subtitulo">Estimado Alumn@</ion-card-subtitle>
+      
+    </ion-card-header>
+    <ion-card-content>
+      <p class="parrafo">
+        Mediante esta función usted podrá acceder a la cámara de sus dispositivo para poder registrar su asistencias mediante el código QR generado por su profesor
+
+
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+  <icon-card>
+    <img src="assets/AlumnoQR.jpg" class="ion-padding">
+  </icon-card>
+  <div class="action-button ion-padding">
+    <ion-button  type="submit" class="login-button"
+                size="large" class="login-button" routerLink="/generar-qr" >
+                Ir
+    </ion-button>
+  </div> 
+
+
+</ion-content>

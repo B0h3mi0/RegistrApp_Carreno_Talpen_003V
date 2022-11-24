@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        text="Back"
+        color="primary"
+        mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tipo usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Registro</ion-card-title>
+      
+    </ion-card-header>
+    <ion-card-content>
+      <p class="parrafo">
+        Antes de comenzar selecciona que tipo de usuario eres:
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+  <div class="action-button ion-padding">
+    <ion-button  type="submit" class="login-button"
+                size="large" class="login-button" routerLink="/registro-p" >
+                Docente
+    </ion-button>
+  </div>
+  <div class="action-button ion-padding">
+    <ion-button  type="submit" class="login-button"
+                size="large" class="login-button" routerLink="/registro">
+                Alumno
+    </ion-button>
+  </div>
+  
+
+

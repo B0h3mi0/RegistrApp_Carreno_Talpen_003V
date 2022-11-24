@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/home"
+        color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title size="small" id="azul1">Registro Docentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="fondoApp">
+  <ion-img src="assets/logoApp.png" ></ion-img>
+
+
+    <ion-item>
+      <ion-label  position="stacked" >Ingrese nombre:</ion-label>
+      <ion-input [(ngModel)]="datos.nombre"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="stacked">Rut</ion-label>
+      <ion-input [(ngModel)]="datos.rut"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="stacked" >Ingrese correo institucional:</ion-label>
+      <ion-input type="email" [(ngModel)]="datos.correo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="stacked">Ingrese contraseña:</ion-label>
+      <ion-input type="password" [(ngModel)]="datos.password"></ion-input>
+    </ion-item>
+
+
+    <ion-row>
+      <ion-col offset="3" size="6">
+          <ion-button (click)="registrar()" id="btn" 
+          expand="block" strong=true >
+          Aceptar
+          </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+</ion-content>

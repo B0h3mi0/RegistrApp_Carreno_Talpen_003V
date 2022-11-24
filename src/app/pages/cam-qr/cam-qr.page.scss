@@ -1,0 +1,18 @@
+ion-modal {
+    &.bottom-end {
+      align-items: flex-end;
+      --height: auto;
+      .ion-page {
+        position: relative;
+        display: block;
+        contain: content;
+      }
+    }
+  }
+
+qr-code {
+    text-align: center;
+    margin-left: 60px;
+    align-items: flex-end;
+}
+
