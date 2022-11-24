@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
-import { NavController } from '@ionic/angular';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AlertController, LoadingController } from '@ionic/angular';
+import { AuthService } from '../../services/auth.service';
+import { InteractionService } from '../../services/interaction.service';
+import { UserI } from 'src/app/models/models.module';
+
 
 @Component({
   selector: 'app-login',
@@ -9,32 +13,40 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
   styleUrls: ['./logalumno.page.scss'],
 })
 export class LogalumnoPage implements OnInit {
+  datos: UserI = {
+    rut: null,
+    nombre: null,
+    correo: null,
+    password: null,
+    uid: null,
+    perfil: 'alumno'
+  };
+  credenciales = {
+    correo: null,
+    password: null
+  }
 
-  formularioLogin: FormGroup;
+  constructor(private auth: AuthService,
+                private interaction: InteractionService,
+                private router: Router,
+                private alertController: AlertController) {}
 
-  constructor(private alertController: AlertController, 
-              private navController: NavController, 
-              private fb: FormBuilder) {
-                this.formularioLogin = fb.group({ 
-                  'correo': new FormControl("", Validators.required), 
-                  'password': new FormControl("", Validators.required)
-                })
+
+  ngOnInit() {}
+
+  async login() {
+    await this.interaction.presentLoading('Ingresando....');
+    console.log('credenciales -> ', this.credenciales);
+    const res = await this.auth.login(this.credenciales.correo, this.credenciales.password).catch(error => {
+      console.log('error');
+      this.interaction.closeLoading();
+      this.interaction.presentToast('Usuario o contraseña invalido');
+    });
+    if (res) {
+      console.log('res -> ', res);
+      this.interaction.closeLoading();
+      this.interaction.presentToast('Ingresado con exito'+ this.datos.nombre);
+      this.router.navigate(['/alumno']);
     }
-
-  ngOnInit() {
   }
-
-  
-
-
-  async alertMsg(){
-    const alert = await this.alertController.create({ 
-      header: 'Error..',
-      message: 'Los datos ingresados son incorrectos',
-      buttons: ['Aceptar']
-    })
-    await alert.present();
-    return;
-  }
-
 }

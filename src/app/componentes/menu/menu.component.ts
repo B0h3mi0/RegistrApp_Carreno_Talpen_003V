@@ -25,13 +25,13 @@ export class MenuComponent implements OnInit {
 
                     this.auth.stateUser().subscribe( res => {
                         if (res) {
-                              console.log('está logeado');
+                              console.log('Está logeado :D');
                               this.login = true;
                               this.getDatosUser(res.uid);
                         } else {
-                          console.log('no está logeado');
+                          console.log('no está logeado :c');
                           this.login = false;
-                         //  this.router.navigate(['/login'])
+                         //  this.router.navigate(['/home'])
                         }
                     });
 
@@ -47,9 +47,8 @@ export class MenuComponent implements OnInit {
 
   logout() {
     this.auth.logout();
-    this.interaction.presentToast('sesion finalizada');
-    this.router.navigate(['/login']);
-
+    this.interaction.presentToast('Sesion finalizada. . .');
+    this.router.navigate(['/home']);
 }
 
 

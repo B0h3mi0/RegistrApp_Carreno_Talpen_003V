@@ -12,33 +12,29 @@
 <ion-content id="fondoApp">
   <ion-img src="assets/logoApp.png" ></ion-img>
 
-  <form [formGroup] = "formularioLogin">
+
 
     <ion-item>
       <ion-label  position="floating" class="ion-text-center" >Ingrese correo institucional...</ion-label>
-      <ion-input formControlName="correo"></ion-input>
+      <ion-input [(ngModel)]="credenciales.correo"></ion-input>
     </ion-item>
     
     <br>
 
     <ion-item>
       <ion-label  position="floating" class="ion-text-center" >Ingrese contraseña...</ion-label>
-      <ion-input formControlName="password" type="password"></ion-input>
+      <ion-input [(ngModel)]="credenciales.password" type="password"></ion-input>
     </ion-item>
     <br>
 
     <ion-row>
       <ion-col  offset="3" size="6">
-        <ion-button (click)="Ingresar()" id="btn" expand="block" strong=true >
+        <ion-button (click)="login()" id="btn" expand="block" strong=true  type="submit" routerLink="/alumno">
           Aceptar
         </ion-button>
       </ion-col>
     </ion-row>
-  </form>
-  <a color="medium" [routerLink]="['/recuperar']" class="underline" style="color:gold; align-content:center;"  >¿Olvidaste tu contraseña?</a>
-  <br>
 
-  <a color="medium" [routerLink]="['/create']" class="underline" style="color:gold; align-content:center;"  >¿Aun no te registras?</a>
 
 
 </ion-content>

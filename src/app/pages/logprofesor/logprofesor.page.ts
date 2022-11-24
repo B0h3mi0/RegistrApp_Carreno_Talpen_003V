@@ -46,7 +46,7 @@ export class LogprofesorPage implements OnInit {
       console.log('res -> ', res);
       this.interaction.closeLoading();
       this.interaction.presentToast('Ingresado con exito'+ this.datos.nombre);
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/profesor']);
     }
   }
 }
