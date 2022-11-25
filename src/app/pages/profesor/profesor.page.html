@@ -1,16 +1,15 @@
 <ion-header>
   <ion-toolbar >
-    <ion-back-button slot="start"
-          defaultHref=""
-          color="primary">
-    </ion-back-button>
+
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
     <ion-buttons slot="end">
       <ion-button (click)="logout()">Logout
         <ion-icon name="person"></ion-icon>
       </ion-button>
-        <p>{{ handlerMessage }}</p>
-        <p>{{ roleMessage }}</p>
     </ion-buttons>
+  
     
 
     <ion-title>Registrapp</ion-title>

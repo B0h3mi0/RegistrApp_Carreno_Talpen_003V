@@ -39,10 +39,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/logout/logout.module').then( m => m.LogoutPageModule)
   },
   {
-    path: 'crear-qr',
-    loadChildren: () => import('./pages/crear-qr/crear-qr.module').then( m => m.CrearQrPageModule)
-  },
-  {
     path: 'generar-qr',
     loadChildren: () => import('./pages/generar-qr/generar-qr.module').then( m => m.GenerarQrPageModule)
   },

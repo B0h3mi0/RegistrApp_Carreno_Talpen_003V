@@ -7,7 +7,7 @@
         color="primary"
         mode="ios"></ion-back-button>
     </ion-buttons>
-    <ion-title>Crear QR</ion-title>
+    <ion-title>Hola profe!</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -16,8 +16,8 @@
       <ion-item>
         <ion-label>Asignaturas</ion-label>
         <ion-select placeholder="Opcion" [(ngModel)]="usuario.nom" okText="Escoger curso" cancelText="Cancelar">
-          <ion-select-option value="Programacion de Algoritmos">Programacion Algoritmos</ion-select-option>
-          <ion-select-option value="Desarrollo software de escritorio">Software de escritorio</ion-select-option>
+          <ion-select-option value="Calidad de software">Calidad de software</ion-select-option>
+          <ion-select-option value="Proceso de portafolio">Proceso de portafolio</ion-select-option>
           <ion-select-option value="Programacion Aplicaciones moviles">Aplicaciones moviles</ion-select-option>
         </ion-select>
       </ion-item>
@@ -56,30 +56,28 @@
       </ion-modal>
     </ion-list>
   </ion-card-content>  
-
+  
+ 
     <ion-card-content>
 
-
-
-       <ion-button 
+      <ion-button 
            expand="block" 
            class="ion-margin" 
            (click)="generaScan()">
-           Generate QR Code  
+           QR Nuevo 
        </ion-button>
 
        <qrcode 
          [qrdata]="qrCodeString" 
          [width]="285" 
          [errorCorrectionLevel]="'M'">
-       </qrcode>
-
+       </qrcode >
 
      </ion-card-content>
 
    <ion-card-content>
     <p class="parrafo">
-      Asignatura : {{usuario.nom}}
+      Asignatura : {{usuario.nom}} Seccion: 005V
       <br>
       Fecha : {{dateExample}}
     </p>
