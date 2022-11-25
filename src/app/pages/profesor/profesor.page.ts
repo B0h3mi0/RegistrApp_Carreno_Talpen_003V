@@ -33,7 +33,6 @@ export class ProfesorPage implements OnInit {
                   } else {
                     console.log('no está logeado :c');
                     this.login = false;
-                   //  this.router.navigate(['/home'])
                   }
               });
               }
@@ -61,14 +60,11 @@ export class ProfesorPage implements OnInit {
 logout() {
   this.auth.logout();
   this.interaction.presentToast('Sesion finalizada. . .');
-  this.router.navigate(['/home']);
-  return signOut(this.auth);
+  this.router.navigate(['']);
 }
 
 
-  mostrarMenu(){
-    this.menuController.open('first');
-  }
+
     //método que muestra un mensaje y un botón Ok
     async Generate() {
       const alert = await this.alertController.create({

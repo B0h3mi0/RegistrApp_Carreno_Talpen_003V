@@ -21,9 +21,12 @@ export class LogprofesorPage implements OnInit {
     uid: null,
     perfil: 'alumno'
   };
+
   credenciales = {
+    nombre:null,
     correo: null,
-    password: null
+    password: null,
+    perfil: null
   }
 
   constructor(private auth: AuthService,
@@ -37,6 +40,7 @@ export class LogprofesorPage implements OnInit {
   async login() {
     await this.interaction.presentLoading('Ingresando....');
     console.log('credenciales -> ', this.credenciales);
+    const inf = this.datos.perfil; 
     const res = await this.auth.login(this.credenciales.correo, this.credenciales.password).catch(error => {
       console.log('error');
       this.interaction.closeLoading();
@@ -45,7 +49,7 @@ export class LogprofesorPage implements OnInit {
     if (res) {
       console.log('res -> ', res);
       this.interaction.closeLoading();
-      this.interaction.presentToast('Ingresado con exito'+ this.datos.nombre);
+      this.interaction.presentToast('Ingresado con exito '+ this.credenciales.nombre);
       this.router.navigate(['/profesor']);
     }
   }

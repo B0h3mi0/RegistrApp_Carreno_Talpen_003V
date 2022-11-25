@@ -1,15 +1,17 @@
 <ion-header>
   <ion-toolbar >
+    <ion-back-button slot="start"
+          defaultHref=""
+          color="primary">
+    </ion-back-button>
     <ion-buttons slot="end">
-      <ion-button (click)="logout()">
+      <ion-button (click)="logout()">Logout
         <ion-icon name="person"></ion-icon>
       </ion-button>
         <p>{{ handlerMessage }}</p>
         <p>{{ roleMessage }}</p>
     </ion-buttons>
-    <ion-buttons slot="start">
-      <ion-menu-button auto-hide="false"></ion-menu-button>
-    </ion-buttons>
+    
 
     <ion-title>Registrapp</ion-title>
   </ion-toolbar>
@@ -46,7 +48,7 @@
   <ion-row>
     <ion-col  offset="3" size="6">
       <ion-button  (click)="Generate()" expand="full" 
-       shape="round"id="btn" expand="block"  strong=true >
+       shape="round"id="btn" expand="block"  strong=true routerLink="/cam-qr" >
         Generar QR
       </ion-button>
     </ion-col>

@@ -7,8 +7,9 @@
 #azul3{
     color:#00AFC1;
 }
-#yelllow{
+#yellow{
     color:#FFD124;
+    text-shadow: 1px 1px 2px black;
 }
 
 ion-content{
@@ -30,4 +31,17 @@ ion-toolbar{
 ion-label{
     --color: #006778;
     --padding-top: 10%;
+}
+p{
+    color: azure;
+}
+
+ion-card-title{
+    color: #FFD124;
+
+}
+
+ion-card-subtitle{
+    color: #006778;
+
 }

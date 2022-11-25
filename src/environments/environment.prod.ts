@@ -1,5 +1,5 @@
 export const environment = {
-  firebaseConfig :{
+  firebaseConfig : {
     apiKey: "AIzaSyDKcGiDrqlg0QP3zQIJHIjQHLecI2lXCQE",
     authDomain: "controlacces-21ebb.firebaseapp.com",
     projectId: "controlacces-21ebb",

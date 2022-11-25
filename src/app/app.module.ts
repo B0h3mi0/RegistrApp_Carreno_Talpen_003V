@@ -27,10 +27,9 @@ import { AjustesPage } from './backend/ajustes/ajustes.page';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
-
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),

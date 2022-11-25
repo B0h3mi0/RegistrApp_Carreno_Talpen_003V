@@ -5,26 +5,16 @@
 export const environment = {
   apiKey: 'd19a6bc4d53b40adbabc8347441ab7d4',
   
-  firebase: {
-    projectId: 'akprofe-b9452',
-    appId: '1:84861514206:web:257196662fd83ea0fdad4f',
-    storageBucket: 'akprofe-b9452.appspot.com',
-    apiKey: 'AIzaSyBcACiSulhf3nlCMzw3mUnppA-sqJuWjRI',
-    authDomain: 'akprofe-b9452.firebaseapp.com',
-    messagingSenderId: '84861514206',
+  firebaseConfig : {
+    apiKey: "AIzaSyDKcGiDrqlg0QP3zQIJHIjQHLecI2lXCQE",
+    authDomain: "controlacces-21ebb.firebaseapp.com",
+    projectId: "controlacces-21ebb",
+    storageBucket: "controlacces-21ebb.appspot.com",
+    messagingSenderId: "987283674593",
+    appId: "1:987283674593:web:cf477031fb80ccf8b92ea0"
   },
-  mapsKey: 'AIzaSyCTuFkRitdlRg6iR_dp53yW71BSf8lA8EI',
   production: false,
   
-};
-
-export const firebaseConfig = {
-  apiKey: 'AIzaSyDIgnYlh1BAgLDR2-CL8aMoDcg0F6yuyVQ',
-  authDomain: 'ionic-first-app-a7606.firebaseapp.com',
-  projectId: 'ionic-first-app-a7606',
-  storageBucket: 'ionic-first-app-a7606.appspot.com',
-  messagingSenderId: '194325429481',
-  appId: '1:194325429481:web:b98a668432cf9e56f54478',
 };
 
 /*

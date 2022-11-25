@@ -48,7 +48,7 @@ export class MenuComponent implements OnInit {
   logout() {
     this.auth.logout();
     this.interaction.presentToast('Sesion finalizada. . .');
-    this.router.navigate(['/home']);
+    this.router.navigate(['']);
 }
 
 

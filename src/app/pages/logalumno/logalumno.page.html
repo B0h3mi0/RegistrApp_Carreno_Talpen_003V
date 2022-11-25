@@ -12,7 +12,11 @@
 <ion-content id="fondoApp">
   <ion-img src="assets/logoApp.png" ></ion-img>
 
-
+  <ion-item>
+    <ion-label  position="floating" class="ion-text-center" >Ingrese nombre usuario....</ion-label>
+    <ion-input [(ngModel)]="credenciales.nombre"></ion-input>
+  </ion-item>
+  <br>
 
     <ion-item>
       <ion-label  position="floating" class="ion-text-center" >Ingrese correo institucional...</ion-label>
@@ -29,7 +33,7 @@
 
     <ion-row>
       <ion-col  offset="3" size="6">
-        <ion-button (click)="login()" id="btn" expand="block" strong=true  type="submit" routerLink="/alumno">
+        <ion-button (click)="login()" id="btn" expand="block" strong=true  type="submit">
           Aceptar
         </ion-button>
       </ion-col>

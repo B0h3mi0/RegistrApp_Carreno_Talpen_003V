@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
@@ -62,13 +61,8 @@ export class AlumnoPage implements OnInit {
 logout() {
   this.auth.logout();
   this.interaction.presentToast('Sesion finalizada. . .');
-  this.router.navigate(['/home']);
+  this.router.navigate(['']);
 }
-
-  
-  mostrarMenu(){
-    this.menuController.open('first');
-  }
   
   //método que muestra un mensaje y un botón Ok
   async Ok() {

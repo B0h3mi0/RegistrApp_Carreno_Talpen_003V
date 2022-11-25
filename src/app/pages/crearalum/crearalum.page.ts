@@ -48,7 +48,7 @@ async registrar(){
     await this.firestore.createDoc(this.datos, path, id);
     this.interaction.closeLoading();
     this.interaction.presentToast('registrado con exito');
-    this.router.navigate(['/home'])
+    this.router.navigate([''])
   }
 }
 

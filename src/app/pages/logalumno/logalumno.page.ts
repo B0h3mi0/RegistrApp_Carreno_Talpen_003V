@@ -7,23 +7,18 @@ import { InteractionService } from '../../services/interaction.service';
 import { UserI } from 'src/app/models/models.module';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './logalumno.page.html',
   styleUrls: ['./logalumno.page.scss'],
 })
 export class LogalumnoPage implements OnInit {
-  datos: UserI = {
-    rut: null,
-    nombre: null,
+  credenciales = {
+    nombre:null,
     correo: null,
     password: null,
-    uid: null,
-    perfil: 'alumno'
-  };
-  credenciales = {
-    correo: null,
-    password: null
+    perfil: null
   }
 
   constructor(private auth: AuthService,
@@ -45,7 +40,7 @@ export class LogalumnoPage implements OnInit {
     if (res) {
       console.log('res -> ', res);
       this.interaction.closeLoading();
-      this.interaction.presentToast('Ingresado con exito'+ this.datos.nombre);
+      this.interaction.presentToast('Ingresado con exito '+ this.credenciales.nombre);
       this.router.navigate(['/alumno']);
     }
   }
